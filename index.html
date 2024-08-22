@@ -37,9 +37,9 @@
             </div>
             <div class="lock-screen active">
                 <div class="time">
-                    <h1>10:08</h1>
-                    <span>Saturday, October 29</span>
-                </div>
+                    <h1 id="currentTime">10:08</h1>
+                    <span id="currentDate">Saturday, October 29</span>
+                </div>                
                 <div class="scr-lock-nav">
                     <div class="left">
                         <button class="r-deg">
@@ -270,5 +270,29 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="index.js"></script>
+    <script>
+        function updateTimeAndDate() {
+            const now = new Date();
+            
+            // Formatage de l'heure
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            minutes = minutes < 10 ? '0' + minutes : minutes;
+            const currentTime = `${hours}:${minutes}`;
+    
+            // Formatage de la date
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const currentDate = `${days[now.getDay()]}, ${months[now.getMonth()]} ${now.getDate()}`;
+    
+            // Mise à jour des éléments HTML
+            document.getElementById("currentTime").textContent = currentTime;
+            document.getElementById("currentDate").textContent = currentDate;
+        }
+    
+        // Mettre à jour l'heure et la date immédiatement puis toutes les minutes
+        updateTimeAndDate();
+        setInterval(updateTimeAndDate, 60000); // 60000ms = 1 minute
+    </script>    
 </body>
 </html>
