@@ -251,6 +251,7 @@ body {
     border: 0;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.452);
+    padding: 3px 0px 0px 0px;
 }
 
 .scr-lock-nav button.r-deg {
@@ -440,24 +441,7 @@ body {
 }
 
 .netflix {
-    background-color: #000; /* Fond noir */
-    color: red; /* Texte rouge */
-    padding: 10px 20px; /* Espacement interne pour le texte */
-    font-weight: bold; /* Texte en gras */
-    text-align: center; /* Centrer le texte */
-    display: flex; /* Utiliser Flexbox pour centrer le texte */
-    justify-content: center; /* Centrer horizontalement */
-    align-items: center; /* Centrer verticalement */
-}
-
-.itunestore {
-    color: #fff;
-    background-image: linear-gradient(#c000cb, #9d0df9);
-}
-
-.apple-tv {
-    background-color: #111713;
-    color: #fff;
+    background-color: #fff;
 }
 
 .home {
@@ -468,39 +452,7 @@ body {
     color: #cd0d54;
 }
 
-.phone-log {
-    background-color: #9ff327 !important;
-    color: #fff;
-}
-
-.music {
-    background-color: #c93b44;
-    color: #fff;
-}
-
-.appstore {
-    background-image: linear-gradient(#4a80d2, #254fb8);
-    color: #fff;
-}
-
 .google {
-    background-image: linear-gradient(#000000eb, #000000c5);
-    color: #fff;
-    line-height: 160% !important;
-}
-
-.facebook-app {
-    background-image: linear-gradient(#4a80d2, #254fb8);
-    color: #fff;
-}
-
-.xbox-app {
-    background-color: green;
-    color: #fff;
-}
-
-.playstation-app {
-    background-image: linear-gradient(blue, #000 180%);
     color: #fff;
 }
 
@@ -545,9 +497,8 @@ body {
     background-image: linear-gradient(to right, #fcb045,#fd1d1d,#833ab4);
 }
 
-.twitter-app {
-    color: #fff;
-    background-image: linear-gradient(#4083e9,#376bee);
+.x {
+    padding: 5px 5px;
 }
 
 .globe {
@@ -558,11 +509,6 @@ body {
 .whatsapp-app {
     background-color: rgb(4, 180, 4);
     color: #fff;
-}
-
-.pinterest-app {
-    color: #fff;
-    background-color: rgb(253, 36, 36);
 }
 
 .github-app {
@@ -579,17 +525,12 @@ body {
     background-color: yellow;
 }
 
-.button-app.message{
-    background-color: #adec43;
-    color: #fff;
+a {
+    color: inherit; /* Utilise la couleur du texte du parent */
+    text-decoration: none; /* Supprime le soulignement */
+    display: inline-block; /* Assure que le lien prenne la taille de son contenu */
 }
 
-.message{
-    background-color: #adec43;
-    color: #fff;
-}
-
-.facetime {
-    background-color: #65ec43;
-    color: #fff;
+a:hover {
+    color: inherit; /* Vous pouvez aussi ajouter des styles sur hover si vous le souhaitez */
 }
