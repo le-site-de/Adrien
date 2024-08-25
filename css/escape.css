@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    transition: .8s;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(Poppins-Regular.ttf);
+}
+
+body {
+    display: flex;
+    transition: .8s;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins';
+}
+
+.iphone-frame {
+    background-color: #fff;
+    height: 500px;
+    width: 260px;
+    position: relative;
+    border: 8px solid #000;
+    border-radius: 40px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 0px 0px #333;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.iphone-frame .norch {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 24px;
+    width: 100px;
+    background-color: #000;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.norch .rounded {
+    position: relative;
+}
+
+.norch::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 7px;
+    height: 4px;
+    width: 30px;
+    border-radius: 10px;
+    border: 0.03em solid rgb(51,51,51,0.479);
+    box-shadow: inset 0px 0px 3px 0px rgb(51,51,51,0.712);
+}
+
+.norch::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background-color: #333;
+}
+
+.nav {
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    height: 30px;
+    left: 0;
+    z-index: 101;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav .right {
+    padding-right: 15px;
+}
+
+.nav .right ion-icon {
+    color: #000;
+    font-size: 14px;
+}
+
+.button {
+    position: absolute;
+    bottom: 5px;
+    height: 2px;
+    border-radius: 20px;
+    width: 90px;
+    left: 50%;
+    z-index: 102;
+    background-color: #000;
+    transform: translateX(-50%);
+}
+
+/* Style for the iframe to fit the phone screen */
+.phone-content {
+    position: absolute;
+    top: 29px; /* Space for the navigation bar */
+    bottom: 10px; /* Space for the bottom button */
+    left: 0;
+    right: 0;
+    width: 125%;
+    height: 110vh; /* Adjusted height to fit within the phone frame */
+    border: none; /* Remove iframe border */
+    border-bottom-left-radius: 35px; /* Rounded corners at the bottom-left */
+    border-bottom-right-radius: 35px; /* Rounded corners at the bottom-right */
+    overflow: hidden; /* Hide scroll bars */
+    transform: scale(0.8); /* Scale down the iframe to achieve the desired effect */
+    transform-origin: 0 0; /* Ensure scaling starts from the top-left corner */
+}

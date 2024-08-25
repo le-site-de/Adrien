@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    transition: .8s;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(Poppins-Regular.ttf);
+}
+
+body {
+    display: flex;
+    transition: .8s;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Poppins';
+}
+
+/*
+.application-menu {
+    transform: scale(1.6);
+}
+*/
+
+.iphone-frame {
+    background-color: #fff;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+    width: 260px;
+    border: 8px solid #000;
+    border-radius: 40px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 0px 0px #333;
+}
+
+.iphone-frame .norch {
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 24px;
+    width: 100px;
+    background-color: #000;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.norch .rounded {
+    position: relative;
+}
+
+.norch::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 7px;
+    height: 4px;
+    width: 30px;
+    border-radius: 10px;
+    border: 0.03em solid rgb(51,51,51,0.479);
+    box-shadow: inset 0px 0px 3px 0px rgb(51,51,51,0.712);
+}
+
+.norch::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background-color: #333;
+}
+
+.nav {
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    height: 30px;
+    left: 0;
+    z-index: 101;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav .right {
+    padding-right: 15px;
+}
+
+.nav .right ion-icon {
+    color: #000;
+    font-size: 14px;
+}
+
+.button {
+    position: absolute;
+    bottom: 5px;
+    height: 2px;
+    border-radius: 20px;
+    width: 90px;
+    left: 50%;
+    z-index: 102;
+    background-color: #fff;
+    transform: translateX(-50%);
+}
