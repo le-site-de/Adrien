@@ -114,7 +114,7 @@ body {
     left: 0;
     right: 0;
     width: 125%;
-    height: 110vh; /* Adjusted height to fit within the phone frame */
+    height: 118%; /* Adjusted height to fit within the phone frame */
     border: none; /* Remove iframe border */
     border-bottom-left-radius: 35px; /* Rounded corners at the bottom-left */
     border-bottom-right-radius: 35px; /* Rounded corners at the bottom-right */
