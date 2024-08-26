@@ -534,3 +534,8 @@ a {
 a:hover {
     color: inherit; /* Vous pouvez aussi ajouter des styles sur hover si vous le souhaitez */
 }
+
+.stake img {
+    width: 32px !important;
+    height: auto !important;
+}
